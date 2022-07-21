@@ -12,7 +12,11 @@ def exists_word(word, instance):
                 events.append({"linha": index + 1})
 
         if len(events):
-            listings.append({"palavra": word, "arquivo": file["nome_do_arquivo"], "ocorrencias": events})
+            listings.append({
+                "palavra": word,
+                "arquivo": file["nome_do_arquivo"],
+                "ocorrencias": events
+            })
 
     return listings
 
